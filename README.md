@@ -18,12 +18,21 @@ To do so, insert a “for” loop between the initialization and termination of 
 Loop will initialize turn by turn and after sending the email, the SMTP session will be terminated.
 
 1.import smtplib
+<br>
 2.# list of email_id to send the mail
+<br>
 3.li = ["xxxxx@gmail.com", "yyyyy@gmail.com"]
+<br>
 4. for dest in li:
-5.	s = smtplib.SMTP('smtp.gmail.com', 587)
-6.	s.starttls()
-7.	s.login("sender_email_id", "sender_email_id_password")
-8.	message = "Message_you_need_to_send"
-9.	s.sendmail("sender_email_id", dest, message)
-10.	s.quit()
+<br>
+5.	   s = smtplib.SMTP('smtp.gmail.com', 587)
+<br>
+6.	   s.starttls()
+<br>
+7.	   s.login("sender_email_id", "sender_email_id_password")
+<br>
+8.	   message = "Message_you_need_to_send"
+<br>
+9.	   s.sendmail("sender_email_id", dest, message)
+<br>
+10.	   s.quit()
