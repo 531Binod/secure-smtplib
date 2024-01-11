@@ -17,13 +17,13 @@ You can use for loop for that. For example, you have a list of email ids to whic
 To do so, insert a “for” loop between the initialization and termination of the SMTP session. 
 Loop will initialize turn by turn and after sending the email, the SMTP session will be terminated.
 
-import smtplib
-# list of email_id to send the mail
-li = ["xxxxx@gmail.com", "yyyyy@gmail.com"]
-for dest in li:
-	s = smtplib.SMTP('smtp.gmail.com', 587)
-	s.starttls()
-	s.login("sender_email_id", "sender_email_id_password")
-	message = "Message_you_need_to_send"
-	s.sendmail("sender_email_id", dest, message)
-	s.quit()
+1.import smtplib
+2.# list of email_id to send the mail
+3.li = ["xxxxx@gmail.com", "yyyyy@gmail.com"]
+4. for dest in li:
+5.	s = smtplib.SMTP('smtp.gmail.com', 587)
+6.	s.starttls()
+7.	s.login("sender_email_id", "sender_email_id_password")
+8.	message = "Message_you_need_to_send"
+9.	s.sendmail("sender_email_id", dest, message)
+10.	s.quit()
