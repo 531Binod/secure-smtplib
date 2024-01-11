@@ -9,6 +9,21 @@ SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are two protocols 
 It’s not necessary to use either of these when using a local debugging server.
 
 There are two ways to start a secure connection with your email server:
-
 Start an SMTP connection that is secured from the beginning using SMTP_SSL().
 Start an unsecured SMTP connection that can then be encrypted using .starttls().
+# Send Email to Multiple Recipients using Python
+If you need to send the same message to different people. 
+You can use for loop for that. For example, you have a list of email ids to which you need to send the same mail. 
+To do so, insert a “for” loop between the initialization and termination of the SMTP session. 
+Loop will initialize turn by turn and after sending the email, the SMTP session will be terminated.
+
+import smtplib
+# list of email_id to send the mail
+li = ["xxxxx@gmail.com", "yyyyy@gmail.com"]
+for dest in li:
+	s = smtplib.SMTP('smtp.gmail.com', 587)
+	s.starttls()
+	s.login("sender_email_id", "sender_email_id_password")
+	message = "Message_you_need_to_send"
+	s.sendmail("sender_email_id", dest, message)
+	s.quit()
