@@ -1,6 +1,7 @@
 # Sending a Plain-Text Email
 you’ll learn to send plain-text emails using Python. 
 These are emails that you could write up in a simple text editor.
+SMTP is a protocol that is used to send emails, and as we know Python provides the ‘smtplib’ library to interact with it.
 
 # Starting a Secure SMTP Connection
 When you send emails through Python, you should make sure that your SMTP connection is encrypted, 
